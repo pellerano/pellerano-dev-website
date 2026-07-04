@@ -10,9 +10,7 @@ npm install
 npm run dev
 ```
 
-This starts Next.js on port 3000 and the `json-server` API on port 3001. The API data lives in `db.json`; run `npm run db` to start it by itself.
-
-To use an API hosted elsewhere, set `NEXT_PUBLIC_JSON_SERVER_URL` to its base URL.
+This starts Next.js on port 3000. Experience data lives in `db.json` and is served through the built-in `/api/experiences` route.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

@@ -5,8 +5,6 @@ import { TAILWIND_BREAKPOINTS } from '../contants';
 import { ArrowRightIcon } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 
-const API_URL = process.env.NEXT_PUBLIC_JSON_SERVER_URL ?? 'http://localhost:3001'
-
 function to2DArr(arr, columns = 2) {
   const result = [];
 
@@ -26,24 +24,16 @@ const formatDate = (date) => {
   })
 }
 
-const mapExperiences = (experiences, companies, bullets) =>
-  experiences.map((exp) => {
-    const company = companies.find(
-      (item) => String(item.id) === String(exp.company_id),
-    )
-
-    return {
+const mapExperiences = (experiences) =>
+  experiences.map((exp) => ({
       position: exp.position,
-      company: company?.name,
+      company: exp.company.name,
       start: formatDate(exp.start_date),
       ...(exp.end_date && { end: formatDate(exp.end_date) }),
-      bullet: bullets
-        .filter((item) => String(item.experience_id) === String(exp.id))
-        .map((item) => item.bullet),
-      description: company?.description,
-      img: company?.img,
-    }
-  })
+      bullet: exp.bullets,
+      description: exp.company.description,
+      img: exp.company.img,
+  }))
 
 function Experience() {
   const [experiences, setExperiences] = useState([])
@@ -58,23 +48,15 @@ function Experience() {
     setLoading(true)
 
     try {
-      const [experiencesResponse, companiesResponse, bulletsResponse] = await Promise.all([
-        fetch(`${API_URL}/experiences?enabled=true&_sort=-end_date`),
-        fetch(`${API_URL}/companies`),
-        fetch(`${API_URL}/experience_bullets`),
-      ])
+      const response = await fetch('/api/experiences')
 
-      if (![experiencesResponse, companiesResponse, bulletsResponse].every((response) => response.ok)) {
+      if (!response.ok) {
         throw new Error('Could not load experience data')
       }
 
-      const [experienceData, companyData, bulletData] = await Promise.all([
-        experiencesResponse.json(),
-        companiesResponse.json(),
-        bulletsResponse.json(),
-      ])
+      const experienceData = await response.json()
 
-      setExperiences(mapExperiences(experienceData, companyData, bulletData))
+      setExperiences(mapExperiences(experienceData))
     } catch (error) {
       console.error(error)
       setExperiences([])
