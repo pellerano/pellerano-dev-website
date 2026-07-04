@@ -5,14 +5,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
+nvm use
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+
+This starts Next.js on port 3000 and the `json-server` API on port 3001. The API data lives in `db.json`; run `npm run db` to start it by itself.
+
+To use an API hosted elsewhere, set `NEXT_PUBLIC_JSON_SERVER_URL` to its base URL.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

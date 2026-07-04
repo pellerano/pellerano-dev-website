@@ -1,0 +1,63 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "Origami Risk",
+      "description": "Newtech is a leading business process outsourcing (BPO) company in the Dominican Republic, recognized for their reputation and excellence. They offer customized solutions that integrate innovative technologies with a team of service experts, helping their clients optimize their operations and achieve their strategic objectives.",
+      "img": "nt_logo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Newtech SRL",
+      "description": "Newtech is a leading business process outsourcing (BPO) company in the Dominican Republic, recognized for their reputation and excellence. They offer customized solutions that integrate innovative technologies with a team of service experts, helping their clients optimize their operations and achieve their strategic objectives.",
+      "img": "nt_logo.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Thryv",
+      "description": "Thryv is a technology company that offers a comprehensive platform designed to help small and medium-sized businesses manage and grow their operations. Its solutions combine digital marketing tools, customer relationship management (CRM), payments, appointment scheduling, invoicing, and online presence—all within a single ecosystem. Thryv empowers businesses to streamline their daily operations, enhance customer relationships, and increase visibility and efficiency through simple and scalable technology.",
+      "img": "thryv_logo.png"
+    },
+    {
+      "id": 4,
+      "name": "Capa",
+      "description": "Capa is a fintech company focused on providing modern, secure, and scalable digital financial solutions. Its platform is designed to simplify financial management through efficient technology, automation, and an intuitive user experience, helping businesses and individuals make better decisions and optimize their financial operations with confidence.",
+      "img": "capafi_logo.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Media Revolution SRL",
+      "description": "Media Revolution is a software development and enterprise solutions company based in Santo Domingo, Dominican Republic, founded in 2014. Its mission is to create high-impact enterprise software that enables organizations to automate, scale, and optimize their operations with robust and secure technology tools. The company combines advanced digital platforms, software engineering, and a customer-centric approach to deliver reliable and effective products that help improve its clients productivity, user experience, and business results.",
+      "img": "media_revolution_srl_logo.jpg"
+    }
+  ],
+  "experiences": [
+    { "id": 1, "company_id": 1, "position": "React Engineer", "start_date": "2026-02-01", "end_date": null, "enabled": false },
+    { "id": 2, "company_id": 2, "position": "Software Development Engineer", "start_date": "2021-09-01", "end_date": "2023-10-01", "enabled": true },
+    { "id": 3, "company_id": 3, "position": "Web Developer", "start_date": "2023-10-01", "end_date": null, "enabled": true },
+    { "id": 4, "company_id": 4, "position": "Back End Developer", "start_date": "2022-04-01", "end_date": "2024-04-01", "enabled": true },
+    { "id": 5, "company_id": 5, "position": "Front End Developer", "start_date": "2021-03-01", "end_date": "2021-09-01", "enabled": true }
+  ],
+  "experience_bullets": [
+    { "id": 1, "experience_id": 1, "bullet": "Create and sustain features focused on user needs." },
+    { "id": 2, "experience_id": 1, "bullet": "Partner with designers and backend developers to apply responsive design principles and deliver a smooth user experience." },
+    { "id": 3, "experience_id": 1, "bullet": "Leverage technologies such as React to develop effective and reusable components." },
+    { "id": 4, "experience_id": 1, "bullet": "Produce code that is clear, easy to maintain, and high-performing." },
+    { "id": 5, "experience_id": 2, "bullet": "Create and sustain features focused on user needs." },
+    { "id": 6, "experience_id": 2, "bullet": "Partner with designers and backend developers to apply responsive design principles and deliver a smooth user experience." },
+    { "id": 7, "experience_id": 2, "bullet": "Leverage technologies such as React to develop effective and reusable components." },
+    { "id": 8, "experience_id": 2, "bullet": "Produce code that is clear, easy to maintain, and high-performing." },
+    { "id": 9, "experience_id": 3, "bullet": "Create and maintain user-centered features." },
+    { "id": 10, "experience_id": 3, "bullet": "Collaborate with designers and backend developers to implement responsive design and ensure an optimal user experience." },
+    { "id": 11, "experience_id": 3, "bullet": "Utilize technologies such as React to develop effective and reusable components." },
+    { "id": 12, "experience_id": 3, "bullet": "Produce clean, maintainable, and efficient code." },
+    { "id": 13, "experience_id": 4, "bullet": "Develop and maintain server-side logic using NestJS and TypeScript." },
+    { "id": 14, "experience_id": 4, "bullet": "Design and implement RESTful APIs to connect the application with data storage." },
+    { "id": 15, "experience_id": 4, "bullet": "Utilize NestJS middleware and guards to manage authentication and authorization." },
+    { "id": 16, "experience_id": 4, "bullet": "Collaborate with front-end developers to ensure seamless integration between the backend and the front-end." },
+    { "id": 17, "experience_id": 5, "bullet": "Develop and maintain user-facing features using HTML, CSS, and JavaScript." },
+    { "id": 18, "experience_id": 5, "bullet": "Utilize frameworks such as React to build efficient and reusable components." },
+    { "id": 19, "experience_id": 5, "bullet": "Write clean, maintainable, and efficient code." },
+    { "id": 20, "experience_id": 5, "bullet": "Troubleshoot and debug issues across multiple browsers and platforms." }
+  ]
+}
